@@ -1,8 +1,15 @@
-import math
+segundos = 0
+minutos = 0
+horas = 0
 
-valor_inicial = 1000000
-veinte_por_ciento = valor_inicial * 0.2
-minutos = 235
-horas = math.floor(minutos/ 60)
-print("La persona tiene una totalidad de: ")
-print(veinte_por_ciento * horas + valor_inicial)
+while horas < 24:
+    while minutos < 60:
+        while segundos < 59:            
+            segundos += 1
+            print(f'{horas}: {minutos} : {segundos}')
+        minutos += 1 
+        segundos = 0
+
+    horas += 1 
+    minutos = 0
+

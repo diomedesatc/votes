@@ -1,15 +1,13 @@
-segundos = 0
-minutos = 0
-horas = 0
+input("Vamos a sacar los angulos: ")
+a = int(input("El angulo de A: "))
+b = int(input("El angulo de B: "))
+c = int(input("El angulo de C: "))
 
-while horas < 24:
-    while minutos < 60:
-        while segundos < 59:            
-            segundos += 1
-            print(f'{horas}: {minutos} : {segundos}')
-        minutos += 1 
-        segundos = 0
+if a + b + c == 180:
+    if (a == b) or (b == c) or (a == c):
+        print("El triangulo es ISOSELES")
+    else:
+        print("El triangulo no es ISOSELES")
 
-    horas += 1 
-    minutos = 0
-
+else:
+    print("Los valores ingresados no son validos.")

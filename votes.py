@@ -1,15 +1,21 @@
-inicio = int(input("Ingrese el numero de inicio: "))
-final = int(input("Ingrese el numero final: "))
+suma_total = 0
+const = 3
+rut = 0
 
-if inicio < final:
-    num = inicio + 1
-    for i in range(final - 2):
-        print(num)
-        num += 1
-elif inicio == final:
-    print("El inicio y el final son iguales :) ")
+for i in range(8):
+    rut = int(input("Ingrese su rut")) 
+    suma_total += rut * const
+    if const > 2:
+        const -= 1
+    else:
+        const = 7
+    
+
+numero_verificador = suma_total % 1
+if numero_verificador == 0:
+    print(numero_verificador)
+elif numero_verificador == 10:
+    print("K")
 else:
-    num = inicio - 1
-    for i in range(inicio - 2):
-        print(num)
-        num -= 1
+    numero_verificador = 11 - numero_verificador
+    print(numero_verificador)

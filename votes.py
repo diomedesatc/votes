@@ -11,7 +11,7 @@ for i in range(8):
         const = 7
     
 
-numero_verificador = suma_total % 1
+numero_verificador = suma_total % 11
 if numero_verificador == 0:
     print(numero_verificador)
 elif numero_verificador == 10:

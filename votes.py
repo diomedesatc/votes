@@ -1,13 +1,13 @@
-input("Vamos a sacar los angulos: ")
-a = int(input("El angulo de A: "))
-b = int(input("El angulo de B: "))
-c = int(input("El angulo de C: "))
+inicio = int(input("Ingrese el numero de inicio: "))
+final = int(input("Ingrese el numero final: "))
 
-if a + b + c == 180:
-    if (a == b) or (b == c) or (a == c):
-        print("El triangulo es ISOSELES")
-    else:
-        print("El triangulo no es ISOSELES")
-
+if inicio < final:
+    num = inicio
+    for i in range(final):
+        print(num)
+        num += 1
 else:
-    print("Los valores ingresados no son validos.")
+    num = inicio
+    for i in range(inicio):
+        print(num)
+        num -= 1

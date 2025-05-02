@@ -50,7 +50,7 @@ procesando = verificarSiElRutEsCorrecto(rut)
 intentos = 0
 
 while not procesando[0]:
-    print("El rut ingreso no es valido")
+    print("El rut ingresado no es valido")
     rut = input("Ingrese su rut: ")
     procesando = verificarSiElRutEsCorrecto(rut)
     intentos += 1

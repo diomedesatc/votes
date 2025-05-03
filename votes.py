@@ -44,20 +44,24 @@ def obtenerNumeroVerificador(rut_sin_numero_verficador):
     else:
         return numero_verificador
 
-print("Verificador de rut")
-rut = input("Ingrese su rut: ")
-procesando = verificarSiElRutEsCorrecto(rut)
-intentos = 0
-
-while not procesando[0]:
-    print("El rut ingresado no es valido")
+temp = True
+print("Verifiquemos su RUN")
+while temp:
     rut = input("Ingrese su rut: ")
     procesando = verificarSiElRutEsCorrecto(rut)
-    intentos += 1
-    if intentos > 2:
-        print("Recuerda que el formato del rut es de 8 a 9 digitos separados por guion y el numero verificador.")
 
-print("El rut ingresado es valido!!")
+    if procesando[0] == True:
+        verificador = obtenerNumeroVerificador(procesando[1])
+        if verificador == procesando[2]:
+            print("Rut es valido")
+            temp = False
+        else:
+            print("Rut es invalido intentelo nuevamente")
+    else:
+        print("Rut es invalido intente nuevamente")
+
+
+
 
 
 
